@@ -14,19 +14,19 @@ class singleLinkedList {
     Nod head;
 
     public void insertBegin(int d) {
-        Nod newNod = new Nod(d); 
+        Nod newNod = new Nod(d);
         newNod.next = head;
         head = newNod;
     }
 
     public void insertEnd(int d) {
-        Nod newNod = new Nod(d); 
+        Nod newNod = new Nod(d);
         if (head == null) {
             head = newNod;
             return;
         }
         Nod last = head;
-        while (last.next != null) {  
+        while (last.next != null) {
             last = last.next;
         }
         last.next = newNod;
@@ -64,7 +64,7 @@ public class App {
                     System.out.println("puno na tapos na");
                 }
             } else if (op == 2) {
-                System.out.println("1. Insert at beginning"); 
+                System.out.println("1. Insert at beginning");
                 System.out.println("2. Insert at end");
                 int llo = sc.nextInt();
 
@@ -79,18 +79,16 @@ public class App {
                     System.out.println("error");
                 }
 
-                System.out.println("Enter new value? (1 yes=2 no)"); 
-                int eop = sc.nextInt();
+            }
+            System.out.println("Enter new value? (1 yes=2 no)");
+            int eop = sc.nextInt();
 
-                if (eop == 2) {
-                    break;
-                }
-
+            if (eop == 2) {
+                break;
             }
 
         }
 
-    
     }
-      
+
 }
